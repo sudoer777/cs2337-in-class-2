@@ -41,7 +41,7 @@ int main()
     cout<<"Subtraction: "<<R3<<endl;
     
 
-    bool relationals = R2 < R1;
+    bool relationals = R1 < R2;
     
     cout<<"Is rectangle 1's area smaller than rectangle 2's area? ";
     if(relationals){
@@ -50,7 +50,7 @@ int main()
         cout<<"No"<<endl;
     }
     
-    relationals = R2 > R1;
+    relationals = R1 > R2;
     
     cout<<"Is rectangle 1's area bigger than rectangle 2's area? ";
     if(relationals){
@@ -59,13 +59,13 @@ int main()
         cout<<"No"<<endl;
     }
     
-    cout << "Rectangle 1's area: " << R2.getLength() * R2.getWidth() << endl;
-    cout << "Rectangle 2's area: " << R1.getLength() * R1.getWidth() << endl;
+    cout << "Rectangle 1's area: " << R1.getLength() * R1.getWidth() << endl;
+    cout << "Rectangle 2's area: " << R2.getLength() * R2.getWidth() << endl;
 
-    cout << "Postfix Incrementing Rectangle 1 before: " << (R2++) << endl;
-    cout << "Postfix Incrementing Rectangle 1 after: " << R2 << endl;
-    cout << "Prefix Incrementing Rectangle 2 before: " << (++R1) << endl;
-    cout << "Prefix Incrementing Rectangle 2 after: " << R1 << endl;
+    cout << "Prefix Incrementing Rectangle 1 before: " << (++R1) << endl;
+    cout << "Prefix Incrementing Rectangle 1 after: " << R1 << endl;
+    cout << "Postfix Incrementing Rectangle 2 before: " << (R2++) << endl;
+    cout << "Postfix Incrementing Rectangle 2 after: " << R2 << endl;
 
 
     return 0;
