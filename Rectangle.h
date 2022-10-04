@@ -15,7 +15,6 @@ public:
     Rectangle operator-(const Rectangle &rectangle) const;
     bool operator<(const Rectangle &rectangle) const;
     bool operator>(const Rectangle &rectangle) const;
-    bool operator==(const Rectangle &rectangle) const;
     Rectangle &operator++();
     Rectangle operator++(int);
     friend std::ostream &operator<<(std::ostream &output, const Rectangle &rectangle);

@@ -63,10 +63,6 @@ bool Rectangle::operator>(const Rectangle &rs) const {
     }
 }
 
-bool Rectangle::operator==(const Rectangle &rectangle) const {
-    return false;
-}
-
 std::ostream &operator<<(std::ostream &output, const Rectangle &rectangle) {
     output << "length: " << rectangle.length << ", width: " << rectangle.width;
     return output;
