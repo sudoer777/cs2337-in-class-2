@@ -9,7 +9,8 @@ Rectangle Rectangle::operator+(const Rectangle &rectangle) const {
 }
 
 Rectangle::Rectangle(double length, double width) {
-
+    this->length = length;
+    this->width = width;
 }
 
 Rectangle Rectangle::operator-(const Rectangle &rectangle) const {
@@ -29,17 +30,23 @@ bool Rectangle::operator==(const Rectangle &rectangle) const {
 }
 
 std::ostream &operator<<(std::ostream &output, const Rectangle &rectangle) {
-    return <#initializer#>;
+    output << "l:" << rectangle.length << ",w:" << rectangle.width;
+    return output;
 }
 
 Rectangle::Rectangle(const Rectangle &rectangle) {
-
+    length = rectangle.length;
+    width = rectangle.width;
 }
 
 Rectangle &Rectangle::operator++() {
-    return <#initializer#>;
+    length++;
+    width++;
+    return *this;
 }
 
 Rectangle Rectangle::operator++(int) {
-    return Rectangle();
+    auto oldRectangle = *this;
+    ++*this;
+    return oldRectangle;
 }
