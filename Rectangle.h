@@ -1,6 +1,7 @@
-//
-// Created by ethan on 10/4/22.
-//
+/*
+* Ethan Reece - EDR220000
+* Rajit Goel - RXG210046
+*/
 
 #ifndef IN_CLASS_2_RECTANGLE_H
 #define IN_CLASS_2_RECTANGLE_H

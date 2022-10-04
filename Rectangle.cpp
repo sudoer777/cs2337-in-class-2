@@ -1,6 +1,9 @@
-//
-// Created by ethan on 10/4/22.
-//
+/*
+* Ethan Reece - EDR220000
+* Rajit Goel - RXG210046
+*/
+
+
 #include <iostream>
 #include <math.h>
 #include "Rectangle.h"
@@ -65,7 +68,7 @@ bool Rectangle::operator==(const Rectangle &rectangle) const {
 }
 
 std::ostream &operator<<(std::ostream &output, const Rectangle &rectangle) {
-    output << "l:" << rectangle.length << ",w:" << rectangle.width;
+    output << "length: " << rectangle.length << ", width: " << rectangle.width;
     return output;
 }
 
