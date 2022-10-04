@@ -12,18 +12,18 @@ Rectangle::Rectangle(double length, double width) {
     this->width = width;
 }
 
-Rectangle Rectangle::operator+(Rectangle rs){
+Rectangle Rectangle::operator+(const Rectangle &rs) const {
     Rectangle final;
-    
+
     final.length=length+rs.length;
     final.width=width+rs.width;
-    
+
     return final;
 }
 
-Rectangle Rectangle::operator-(Rectangle rs){
+Rectangle Rectangle::operator-(const Rectangle &rs) const {
     Rectangle final;
-    
+
     final.length=length-rs.length;
     if(final.length<0){
         final.length=0;
@@ -32,11 +32,11 @@ Rectangle Rectangle::operator-(Rectangle rs){
     if(final.width<0){
         final.width=0;
     }
-    
+
     return final;
 }
 
-bool Rectangle::operator<(Rectangle rs){
+bool Rectangle::operator<(const Rectangle &rs) const {
     double lhs = length*width;
     double rhs = rs.length*rs.width;
     if(fabs(lhs-rhs)<epsilon){
@@ -48,15 +48,16 @@ bool Rectangle::operator<(Rectangle rs){
     }
 }
 
-bool Rectangle::operator>(Rectangle rs){
-    double lhs = length*width;
-    double rhs = rs.length*rs.width;
-    if(fabs(lhs-rhs)<epsilon){
+bool Rectangle::operator>(const Rectangle &rs) const {
+    double lhs = length * width;
+    double rhs = rs.length * rs.width;
+    if (fabs(lhs - rhs) < epsilon) {
         return false;
-    }else if(lhs>rhs){
+    } else if (lhs > rhs) {
         return true;
-    }else{
+    } else {
         return false;
+    }
 }
 
 bool Rectangle::operator==(const Rectangle &rectangle) const {
@@ -80,7 +81,7 @@ Rectangle &Rectangle::operator++() {
 }
 
 Rectangle Rectangle::operator++(int) {
-    auto oldRectangle = *this;
+    auto oldRectangle = new Rectangle(*this);
     ++*this;
-    return oldRectangle;
+    return *oldRectangle;
 }
